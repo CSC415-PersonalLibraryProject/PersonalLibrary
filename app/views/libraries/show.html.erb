@@ -1,0 +1,37 @@
+<!--Shows the books associated with that library-->
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Library name:</strong>
+  <%= @library.library_name %>
+</p>
+
+<!--Displays the books associated with that library-->
+<table>
+  <thead>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Genre</th>
+    <th>Publisher</th>
+    <th>Date</th>
+    <th>Location</th>
+  </thead>
+  
+  <tbody>
+    <!--Data will eventually be stored in a two dimensional array so that each of the rows can be worked with easily.
+    <!--Merge sort will be used, as it has an average efficieny of O(nlogn), which is fair for longer lists of books (assumption that libraries will most likely get larger in the long term)-->
+    <% @library.books.each do|book| %>
+    <tr>
+      <td><%= book.title -%></td>
+      <td><%= book.author -%></td>
+      <td><%= book.genre -%></td>
+      <td><%= book.publisher -%></td>
+      <td><%= book.date -%></td>
+      <td><%= book.location -%></td>
+    </tr>
+    <% end %>
+    <!--The new book, edit book, and destroy book functions work, but they would throw errors when I tried to implement them here-->
+  </tbody>
+</table>
+  
+<%= link_to 'Back', libraries_path %>
