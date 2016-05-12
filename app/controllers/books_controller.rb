@@ -1,4 +1,5 @@
 #Generated from scaffolding
+#@libraries added to allow libraries to be accessed in books
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
@@ -11,15 +12,18 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @book = Book.find(params[:id])
   end
 
   # GET /books/new
   def new
     @book = Book.new
+    @libraries = Library.all
   end
 
   # GET /books/1/edit
   def edit
+    @book = Book.find(params[:id])
   end
 
   # POST /books
@@ -32,6 +36,7 @@ class BooksController < ApplicationController
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render action: 'show', status: :created, location: @book }
       else
+        @libraries = Library.all
         format.html { render action: 'new' }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end

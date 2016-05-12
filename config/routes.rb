@@ -6,6 +6,20 @@ PersonalLibrary::Application.routes.draw do
 
   root'libraries#index'
 
+  #Methods for books
+  get 'books/index'
+  get 'books/show'
+  get 'books/new'
+  get 'books/edit'
+  post 'books/create'
+  patch 'books/update'
+  get 'books/update'
+  get 'books/destroy'
+  get 'books/set_books'
+  get 'books/book_params'
+  
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
