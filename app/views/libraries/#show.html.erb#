@@ -23,7 +23,7 @@
     <!--Merge sort will be used, as it has an average efficieny of O(nlogn), which is fair for longer lists of books (assumption that libraries will most likely get larger in the long term)-->
     <% @library.books.each do|book| %>
     <tr>
-      <td><%= link_to book.title, :controller => "books", :action => "edit", :id => book.id -%></td>
+      <td><%= book.title -%></td>
       <td><%= book.author -%></td>
       <td><%= book.genre -%></td>
       <td><%= book.publisher -%></td>
@@ -32,11 +32,8 @@
       <td><%= link_to 'Edit', :controller => "books", :action => "edit", :id => book.id  -%></td>
     </tr>
     <% end %>
-    <!--The new book, and destroy book functions work, but they would throw errors when I tried to implement them here-->
+    <!--The new book, edit book, and destroy book functions work, but they would throw errors when I tried to implement them here-->
   </tbody>
 </table>
 
-<!--Add book currently does not work properly
-<%= link_to 'Add Book', :controller => "books", :action => "new" -%>
--->
 <%= link_to 'Back', libraries_path %>

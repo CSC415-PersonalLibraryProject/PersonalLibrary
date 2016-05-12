@@ -1,4 +1,5 @@
 <!--Generated from scaffolding-->
+<!--Modified-->
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -31,5 +32,10 @@
   <%= @book.location %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<!--Returns user to library-->
+<%= link_to 'Return to Library', :controller => "libraries", :action => "show", :id => @book.library_id %>
+
+<!--Removed
+    <%= link_to 'Edit', edit_book_path(@book) %> |
+    <%= link_to 'Back', books_path %>
+-->
