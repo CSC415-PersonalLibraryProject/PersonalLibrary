@@ -1,4 +1,4 @@
-This personal library project is intended to allow avid book collectors the ability to store the information for their personal libraries and view the information in a manner of their choosing.
+This personal library project is intended to allow avid book collectors the ability to store the store the information on their collection and view the information in a manner of their choosing.
 
 This project is designed to aid those with personal libraries, but limited knowledge of such computer systems as Excel, to record their personal libraries and the books contained within.  Ultimately, they will be able to search throughbooks by alphabetical order, by location, or even by author.   Libraries usually get larger, not smaller, and as time goes on, an effective record system is necassary to keep track of all the piles.
 
